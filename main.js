@@ -8,14 +8,14 @@ function getComputerChoice() {
 
 function getHumanChoice() {
   const choices = ['rock', 'paper', 'scissors'];
-  const choice = prompt('Rock, Paper or Scissors').toLowerCase();
+  const choice = prompt('Rock, Paper or Scissors');
 
-  if (!choice || typeof choice !== 'string' || !choices.includes(choice.toLowerCase())) {
+  if (!choice || choice === null || typeof choice !== 'string' || !choices.includes(choice.toLowerCase())) {
     alert('You should choose between Rock, Paper and Scissors');
     return getHumanChoice();
   }
 
-  return choice;
+  return choice.toLowerCase();
 }
 
 function playRound(computerChoice, humanChoice) {
@@ -83,22 +83,3 @@ function playGame() {
     console.log('COMPUTER HAS WIIINN!!');
   }
 }
-
-function isDevToolsClosed() {
-  const threshold = 160; // un valor aproximado para diferenciar
-  const widthDiff = window.outerWidth - window.innerWidth;
-  const heightDiff = window.outerHeight - window.innerHeight;
-
-  return widthDiff < threshold && heightDiff < threshold;
-}
-
-const playBtn = document.getElementById('playBtn');
-
-playBtn.addEventListener('click', () => {
-  if (isDevToolsClosed()) {
-    alert('You should open the console before playing');
-    return;
-  }
-
-  playGame();
-});
