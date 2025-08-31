@@ -1,0 +1,50 @@
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color: #1f1f1f;
+  background-color: #ededed;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+button {
+  border: 1px solid #1f1f1f;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-weight: 500;
+  background-color: white;
+  padding: 6px 15px;
+  cursor: pointer;
+  transition: transform 0.15s ease-out;
+  text-transform: uppercase;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.final-score {
+  font-size: 18px;
+}
+
+.final-result {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#reset-btn {
+  background-color: red;
+  color: white;
+}
